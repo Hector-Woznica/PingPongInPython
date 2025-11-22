@@ -7,10 +7,15 @@
 
 # Plan 2
 <ol>
-    <li> make Right Rod move Up and down </li> 
-    <li> make Left Rod move Up and down </li>
-    <li> make ball move left, right, up and down </li>
+    <li> Make Right Rod move Up and down </li> 
+    <li> Make Left Rod move Up and down </li>
+    <li> Make ball move left, right, up and down </li>
 </ol>
 
 # Plan 3
+
+<ol>
+    <li> Make the ball bounce the other way when contact with a Rod
+    <li> If the ball is missed by a Rod, the other Rod wins
+</ol>
 
