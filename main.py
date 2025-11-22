@@ -1,5 +1,6 @@
-import turtle 
-from setting import positions
+import turtle
+from turtle import Turtle, Screen
+
 
 
 
@@ -19,24 +20,35 @@ def move_right_rod_down():
     if Rod_Right.ycor()>-450:
         Rod_Right.forward(-20)
 
-# adjust the screen of gae
-Screen = turtle.Screen()
-Screen.setup(width=1.0,height=1.0)
-Screen.title("Ping Pong Game")
+
+
+screen = Screen()
+screen.setup(width=1.0,height=1.0)
+# get screen size
+screen_width = screen.window_width()
+screen_height = screen.window_height()
+
+rodleft_position = (-screen_width/2 + 50, 0)
+rodright_position = (screen_width/2 - 50, 0)
+
+
+
+print(screen_width, screen_height)
+screen.title("Ping Pong Game")
 
 
 # we dont know functions so we will make adn write code for differetn rods
-Rod_Left = turtle.Turtle("square")
+Rod_Left = Turtle("square")
 Rod_Left.penup()
 Rod_Left.shapesize(1,25)
 Rod_Left.left(90)
-Rod_Left.goto(positions['LEFT_ROD_X_POS'], 0)
+Rod_Left.goto(rodleft_position)
 
-Rod_Right = turtle.Turtle("square")
+Rod_Right = Turtle("square")
 Rod_Right.penup()
 Rod_Right.shapesize(1,25)
 Rod_Right.left(90)
-Rod_Right.goto(positions['RIGHT_ROD_X_POS'], 0)
+Rod_Right.goto(rodright_position)
 
 # try to make ball circle shape , not square
 # 
